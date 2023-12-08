@@ -1,49 +1,34 @@
-# Palindrome Checker
+# Palindrome Checker Algorithm
 
-This is a simple algorithm to check if a given word is a palindrome. A palindrome is a word, phrase, or sequence of characters that reads the same backward as forward.
+This algorithm checks whether a given word is a palindrome using two counters.
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Algorithm Overview](#algorithm-overview)
+- [Usage](#usage)
+- [Example](#example)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+
+This algorithm is designed to determine if a given word is a palindrome. It employs two counters to compare characters from both ends of the word towards the center.
+
+## Algorithm Overview
+
+The algorithm works as follows:
+1. Initialize variables, including two counters (`i` and `j`) and the length of the word.
+2. Read the input word.
+3. If the length of the word is less than or equal to 1, the word is considered a palindrome, and the algorithm returns `TRUE`.
+4. Use two counters (`i` and `j`) to compare characters at symmetric positions in the word, moving towards the center.
+5. If the loop completes successfully (i.e., `i` becomes greater than `j`), the word is a palindrome, and the algorithm returns `TRUE`; otherwise, it returns `FALSE`.
 
 ## Usage
 
-1. **Clone the Repository:**
-    ```bash
-    git clone https://github.com/elamuhombe/gomycode-recursion-checkpoint.git
-    ```
+You can use this algorithm to check if a given word is a palindrome. Simply pass the word as input, and the algorithm will return `TRUE` if it's a palindrome and `FALSE` otherwise.
 
-2. **Navigate to the Project Directory:**
-    ```bash
-    cd gomycode-recursion-checkpoint
-    ```
-
-3. **Run the Algorithm:**
-    - Make sure you have a Pascal compiler installed.
-    - Open the main program file in your compiler.
-    - Compile and run the program.
-
-4. **Enter a Word:**
-    - When prompted, enter a word that you want to check for palindrome.
-
-5. **View the Result:**
-    - The program will output whether the entered word is a palindrome or not.
-
-## Algorithm Details
-
-The algorithm is implemented in a Pascal-like syntax and follows these steps:
-
-1. Declare variables to store the input word and track length and indices.
-2. Read the input word from the user.
-3. Check the base case: If the length of the word is less than or equal to 1, it is considered a palindrome.
-4. If the word has more than one character, the algorithm checks if characters at symmetric positions are equal.
-5. If all symmetric characters are equal, the word is considered a palindrome.
-6. Output the result.
-
-## Example
-
-For example, if you run the program and enter the word "level," the program will output that it is a palindrome.
-
-## Contributing
-
-Feel free to contribute to the improvement of this algorithm by opening issues or submitting pull requests. Your feedback is valuable!
+```pascal
+result := check_palindrome_with_two_counters(word)
 
 ## License
-
-This project is licensed under my name "Elaine Muhombe"
+The project is licensed under my name "Elaine Muhombe"
