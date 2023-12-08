@@ -1,0 +1,43 @@
+ALGORITHM check_palindrome
+VAR
+    // Declare variables
+    word: STRING
+    len, i: INTEGER
+
+BEGIN
+    // Initialize variables
+    len := LENGTH(word)
+    i := 1
+
+    //Read word
+    read(word);
+    /*Set the base class
+     Check if the word is empty or has only one character
+    */
+    IF len <= 1 THEN
+        RETURN TRUE
+    END IF
+
+    /* Set the recursive class
+       Check if the characters at symmetric positions are equal
+    */
+    WHILE (i <= len / 2) AND (word[i] = word[len - i + 1]) DO
+        i := i + 1
+    END WHILE
+
+    // If the loop completed, it's a palindrome
+    IF i > len / 2 THEN
+        RETURN TRUE
+    ELSE
+        RETURN FALSE
+    END IF
+
+    // Output
+    OUTPUT: TRUE, FALSE
+END
+
+
+
+
+
+
